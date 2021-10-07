@@ -1,0 +1,756 @@
+.header {
+    width: 100%;
+    padding: 16px 0px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.header__nav-bar {
+    width: 1179px;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+}
+
+.header__search::before {
+    content: "";
+    position: absolute;
+    left: -380px;
+    top: -35px;
+    width: 150px;
+    height: 154px;
+    background-image: url('../images/WCF_Logo\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__mini-block {
+    padding-top: 13px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.header__search {
+    position: relative;
+    margin-top: 16px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/Vector.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.header__button {
+    margin-left: 30px;
+    width: 154px;
+    height: 44px;
+    background: #F0C808;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.empty-block {
+    display: none;
+    width: 100%;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 101px;
+    left: -100%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    margin: 0;
+    padding: 13px 0;
+    list-style: none;
+    background-color: white;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    opacity: 0.9;
+    transition-duration: .25s;
+    z-index: 1000;
+}
+
+.menu__box hr {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: black;
+    height: 2px;
+}
+
+.menu__item {
+    display: block;
+    padding: 0px 0px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.contacts__block {
+    height: 250px;
+    background: rgba(202, 212, 222, 0.85);
+    display: flex;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts__left-block {
+    width: 404px;
+    height: 132px;
+    font-family: 'Merriweather', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 44px;
+    color: #2664A6;
+}
+
+.contacts__right-text {
+    width: 773px;
+    height: 75px;
+    font-family: 'Montserrat', sans-serif;
+    ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.contacts__input {
+    position: relative;
+}
+
+.contacts__input input {
+    padding: 11px 30px;
+    background: #FFFFFF;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+    outline: none;
+    width: 270px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A0;
+}
+
+.contacts__input input::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A0;
+    text-transform: uppercase;
+}
+
+.contacts__button {
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 317px;
+    width: 115px;
+    height: 38px;
+    background: #F0C808;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+footer {
+    height: 308px;
+    width: 100%;
+    background: #48545B;
+}
+
+.footer__desktop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: inline-block;
+    width: 100%;
+    line-height: 26px;
+}
+
+.footer__inner {
+    height: 223px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo {
+    background-image: url('../images/WCF_Logo\ 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 120px;
+    margin-top: -15px;
+}
+
+
+.footer__donate-text {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    width: 273px;
+    color: #FFFFFF;
+}
+
+.footer__buttons {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__buttons a {
+    display: none;
+}
+
+.footer__buttons button {
+    height: 36px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.footer__button-left {
+    border: none;
+    background: #F0C808;
+    width: 131px;
+}
+
+.footer__button-right {
+    margin-left: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 205px;
+}
+
+.footer__wcf {
+    margin-top: 37px;
+    margin-left: 133px;
+    width: 115px;
+}
+
+.footer__aktuelles {
+    margin-top: 37px;
+    margin-left: 69px;
+    width: 173px;
+}
+
+.footer__contact {
+    margin-top: 37px;
+    margin-left: 69px;
+    width: 281px;
+}
+
+.footer__title {
+    width: 100%;
+    margin-bottom: 19px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__text {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer__mobile {
+    display: none;
+}
+
+.footer__base {
+    width: 100%;
+    height: 39px;
+    margin-top: 46px;
+    background: #282829;
+    padding: 9px 130px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(202, 212, 222, 0.85);
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        padding: 10px 20px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .header__nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-transform: uppercase;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .header__search::before {
+        content: none;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 30px;
+        width: 100px;
+        height: 100px;
+        background-image: url('../images/WCF_Logo\ 1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .header__nav-bar {
+        display: flex;
+        text-transform: uppercase;
+    }
+
+    .header__mini-block {
+        padding-top: 13px;
+        margin-left: 20px;
+    }
+
+    .header__search {
+        margin-top: 17px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .header__button {
+        margin-top: 5px;
+        margin-left: 20px;
+        width: 120px;
+        height: 32px;
+        font-size: 11px;
+    }
+
+    .contacts__left-block {
+        width: 304px;
+        height: 112px;
+        font-size: 27px;
+        line-height: 38px;
+    }
+
+    .contacts__right-text {
+        width: 573px;
+        height: 100px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .footer__text {
+        font-size: 13px;
+    }
+
+    .footer a {
+        line-height: 19px;
+    }
+
+    .footer__wcf {
+        margin-left: 50px;
+    }
+
+    .footer__aktuelles {
+        margin-left: 35px;
+    }
+
+    .footer__contact {
+        margin-left: 50px;
+    }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+    .footer__buttons a {
+        display: inline-block;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .footer__donate-text {
+        font-size: 13px;
+    }
+
+    .footer__buttons {
+        margin-top: 5px;
+        flex-direction: column;
+        height: 65px;
+    }
+
+    .footer__buttons button {
+        height: 33px;
+        font-size: 13px;
+    }
+
+    .footer__button-right {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1020px) {
+    .footer__inner {
+        margin-left: 30px;
+    }
+
+    .footer__donate-text {
+        width: 240px;
+    }
+
+    .footer__wcf {
+        margin-left: 35px;
+    }
+
+    .footer__contact {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .contacts__block {
+        height: 352px;
+        flex-direction: column;
+        padding-top: 33px;
+        justify-content: flex-start;
+    }
+
+    .contacts__left-block {
+        width: 300px;
+        height: 50px;
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .contacts__right-block {
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .contacts__right-text {
+        width: 355px;
+        height: 80px;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 20px 10px;
+        text-align: center;
+    }
+
+    .contacts__input {
+        padding-top: 65px;
+    }
+
+    .contacts__input input {
+        padding: 12px 30px;
+        width: 220px;
+        font-family: 'Lato', sans-serif;
+        font-size: 11px;
+        line-height: 13px;
+        margin-left: 10px;
+    }
+
+    .contacts__input input::placeholder {
+        font-family: 'Lato', sans-serif;
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .contacts__button {
+        left: 275px;
+        top: 65px;
+        width: 90px;
+    }
+
+    .footer__text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .footer__desktop {
+        display: none;
+    }
+
+    .footer__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #48545B;
+
+    }
+
+    .footer__mobile-block {
+        width: 375px;
+        height: 415px;
+        text-align: center;
+        padding: 0px 10px;
+    }
+
+    .footer__menu {
+        margin: 39px auto 0px;
+        width: 145px;
+        height: 107px;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__button-mobile {
+        margin-top: 26px;
+        margin-bottom: 30px;
+        width: 131px;
+        height: 36px;
+        background: #F0C808;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    .footer__mobile-contacts {
+        text-align: left;
+        margin-top: 8px;
+    }
+
+    .footer__mobile-text {
+        width: 195px;
+        height: 127px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
+
+    .footer__mobile-image {
+        width: 127px;
+        height: 127px;
+        background: url(../images/WCF_Logo\ 1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .footer__mobile-base {
+        width: 100%;
+        height: 75px;
+        background: #282829;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__base-up {
+        display: flex;
+        justify-content: space-between;
+        width: 203px;
+        margin-top: 10px;
+    }
+
+    .footer__base-up a {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .footer__base-down {
+        margin-top: 9px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        color: rgba(202, 212, 222, 0.85);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .header__mini-block {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 13px;
+        line-height: 14px;
+        position: absolute;
+    }
+
+    .header::before {
+        left: 10px;
+        width: 95px;
+        height: 96px;
+    }
+
+    .header__button {
+        margin-right: 17px;
+        margin-top: 5px;
+        width: 123px;
+        height: 25px;
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {}
